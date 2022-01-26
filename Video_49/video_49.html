@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 49</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            h1{
+                text-align: center;
+            }
+            #titulo{
+                background-color: #000;
+                color: #fff;
+                font-size: 24px;
+                text-align: center;
+                font-weight: bold;
+                width: 300px;
+                margin-left: 150px;
+            }
+            foto{
+                margin-left: 150px;
+            }
+        </style>
+
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+                $("#titulo").hide();
+                $("#foto img").width(60).height(40).click(function () {
+                    $(this).animate({
+                        marginLeft: "150px", width: "300px", height: "200px"
+                    }, 1000, function () {
+                        $("#titulo").fadeIn(1000).delay(1000).fadeOut(1000);
+                    }).delay(3000); // termina la funcion animate
+                    $(this).animate({
+                        marginLeft: "0px", width: "60px", height: "40px"
+                    }, 1000);
+                }); // termina la funcion  click
+            }); // termina la funcion  ready
+
+        </script>
+    </head>
+    <body>
+
+        <h1>Prueba Imagen</h1>
+
+        <div id="foto">
+
+            <img src="../../public_html/imagen/1.jpg">
+
+            <p id="titulo">Arbol</p>
+
+        </div>
+
+    </body>
+</html>

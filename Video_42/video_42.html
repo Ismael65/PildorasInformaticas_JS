@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 42</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $("html").dblclick(function(){
+                    alert("Ayyyy");
+                });
+                $("a").mouseover(function(){
+                    var mensaje = "<p>Estás pasando el ratón por encima del link</p>";
+                    $("#principal").append(mensaje);
+                });
+                $("#el_boton").click(function(){
+                    $(this).val("Para de hacer click!!");
+                });
+                $("#el_campo").focus(function(){
+                    $(this).val("Ahora vas a escribir");
+                });
+            });
+            
+        </script>
+    </head>
+    <body>
+        
+        <div id="principal">
+            <h1>Introducción a Eventos</h1>
+            <p><a href="#">Un Link</a></p>
+            <form action="#">
+                <fieldset><legend>Formulario
+                        <p><input name="button" type="button" id="el_boton" value="Un Boton"></p>
+                        <p><input name="textfield" type="text" id="el_campo"></p></legend></fieldset>
+                        
+            </form>
+            
+        </div>
+        
+    </body>
+</html>

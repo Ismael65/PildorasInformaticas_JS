@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 48</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            #imagen2{
+                opacity: 0.5;
+            }
+        </style>
+
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#imagen").click(function () {
+                    $(this).animate({marginLeft: "+=50px"}, 1000);
+                });
+
+                $("#imagen2").mouseover(function () {
+                    $(this).animate({opacity: 1}, 250);
+                });
+
+                $("#imagen2").mouseout(function () {
+                    $(this).animate({opacity: 0.5}, 250);
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+
+        <img src="../../public_html/imagen/diablo.png" id="imagen"><br>
+
+        <img src="../../public_html/imagen/1.jpg" id="imagen2">
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 39</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                document.getElementById("img1").addEventListener("mouseover", cambiar, false);
+                document.getElementById("img1").addEventListener("mouseout", restaurar, false);
+                
+            });
+            
+            function cambiar(){
+                $("img").attr("src", "../../public_html/imagen/logo_personal.png");
+            }
+            
+            function restaurar(){
+                $("img").attr("src", "../../public_html/imagen/diablo.png");
+            }
+    
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <img src="../../public_html/imagen/diablo.png" id="img1">
+        
+    </body>
+</html>

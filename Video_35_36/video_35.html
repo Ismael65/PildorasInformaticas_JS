@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 35</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            .linkdestacacurso{
+                /*background-color: #F30A0A;*/
+                color: #F30A0A;
+                font-weight: bold;
+                margin-left: 25px;
+            }
+            a{
+                display: block;
+                margin-bottom: 20px;
+                font-size: 24px;
+            }
+            #table{
+                text-align: center;
+                border: none;
+                font-size: 24px;
+            }
+            
+        </style>
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            
+            $(document).ready(function(){
+                //$("a[href^⁼'http://']").addClass("linkdestacacurso");
+                
+                document.getElementById("cursos").addEventListener("click", resaltacurso, false);
+                document.getElementById("informacion").addEventListener("click", resaltaejemplo, false);
+                
+            });
+            function resaltacurso(){
+                
+                /*$(".ejemplos").removeClass("linkdestacacurso");
+                
+                $(".cursos").addClass("linkdestacacurso");*/
+                $(".cursos").toggleClass("linkdestacacurso");
+            }
+            function resaltaejemplo(){
+                
+                /*$(".cursos").removeClass("linkdestacacurso");
+                
+                $(".ejemplos").addClass("linkdestacacurso");*/
+                $(".ejemplos").toggleClass("linkdestacacurso");
+            }
+            
+        </script>
+        
+        
+    </head>
+    <body>
+        
+        <div id="table">
+            <form>
+                <input type="checkbox" value="cursos" id="cursos">Cursos
+                <input type="checkbox" value="informacion" id="informacion">Informacion
+            </form>
+        </div>
+        
+        <div id="contieneEnlaces">
+            
+            <a href="http://www.pildorasInformaticas" target="_blank" class="cursos">Pildoras Informaticas</a><br>
+            <a href="google" target="_blank" class="ejemplos">google</a><br>
+            <a href="http://www.minerales" target="_blank" class="cursos">Minerales</a><br>
+            <a href="#Prensa" target="_blank" class="">Prensa</a><br>
+            <a href="#MercadoLibre" target="_blank" class="">Mercado Libre</a><br>
+            <a href="#alcaldia" target="_blank" class="ejemplos">Alcaldia</a><br>
+            
+        </div>
+        
+        
+    </body>
+</html>

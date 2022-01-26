@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>uso_While_1A</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            #contenedor{
+                width: 25%;
+                background-color: #ffc;
+                margin: auto;
+                padding: 15px;
+            }
+        </style>
+        
+        <script>
+            // ciclo WHILE  
+            /*var nombre, edad, poblacion;
+            nombre = prompt("Introduce tu Nombre:");
+                while(!isNaN(nombre)){
+                    nombre = prompt("Introduce un nombre válido");
+                }
+            
+            edad = prompt("Introduce tu edad:");
+                while(edad<=0 || edad > 105 || isNaN(edad)){
+                    edad = prompt("Introduce una edad válida");
+                }
+            
+            poblacion = prompt("Introduce la población:");
+                while(!isNaN(poblacion)){
+                    poblacion = prompt("Introduce un población correcta ");
+                }*/
+                // ciclo Do WHILE
+                var nombre, edad, poblacion;
+            //nombre = prompt("Introduce tu Nombre:");
+                do{
+                    nombre = prompt("Introduce un nombre válido");
+                }while(!isNaN(nombre));
+            
+            //edad = prompt("Introduce tu edad:");
+                do{
+                    edad = prompt("Introduce una edad válida");
+                }while(edad<=0 || edad > 105 || isNaN(edad));
+            
+            //poblacion = prompt("Introduce la población:");
+                do{
+                    poblacion = prompt("Introduce un población correcta ");
+                }while(!isNaN(poblacion));
+                
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        
+        <div id="contenedor">
+            <p>Nombre:
+                <script>document.write(nombre);</script>
+            </p>
+            <p>Edad:
+                <script>document.write(edad);</script>
+            </p>
+            <p>Población:
+                <script>document.write(poblacion);</script>
+            </p>
+            
+        </div>
+        
+    </body>
+</html>

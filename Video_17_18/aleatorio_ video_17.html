@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aleatorio Video 17 y 18</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+    </head>
+    <body>
+        
+        <table width="25%" border="0">
+            <tr>
+                <td><label for="textfield"></label><input type="text" name="textfield" id="c_mensaje"></td>
+                <td><label for="textfield"></label><input type="text" name="textfield" id="c_intentos"</td>
+            </tr>
+        </table>
+        
+        
+        <script>
+            
+            var aleatorio = Math.round(Math.random() * 100);
+            //alert(aleatorio);
+            
+            var minum, intentos;
+            minum = 0;
+            intentos = 0;
+            
+            var mensaje = document.getElementById("c_mensaje");
+            var intentosConsumidos = document.getElementById("c_intentos");
+            
+            do{
+                minum = prompt("Introduce un Nº entre 0 y 100");
+                    if(aleatorio > minum){
+                        mensaje.value ="Mas Alto";
+                        mensaje.style.fontSize = "18px";
+                    }
+                    if(aleatorio < minum){
+                        mensaje.value = "Mas Bajo";
+                        mensaje.style.fontSize = "18px";
+                    }
+                    intentos++;
+                    intentosConsumidos.value = intentos;
+                    intentosConsumidos.style.fontSize = "18px";
+                    intentosConsumidos.style.color = "red";
+                    intentosConsumidos.style.textAlign = "center";
+                
+            }while(aleatorio != minum);
+            mensaje.value = "Correcto";
+            mensaje.style.color = "red";
+            
+        </script>
+    </body>
+</html>

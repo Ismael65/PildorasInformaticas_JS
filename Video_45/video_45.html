@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 45</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            body{
+                background-color: #1A10F4;
+                color: white;
+            }
+            #cabezera{
+                text-align: center;    
+            }
+            h3{
+                margin-left: 30px;
+                padding-left: 30px;
+                background-image: url(../../public_html/imagen/open.png);
+                background-position: left;
+                background-repeat: no-repeat;
+            }
+            .cerrar{
+                background-image: url(../../public_html/imagen/close.png);
+                background-position: left;
+                background-repeat: no-repeat;
+            }
+        </style>
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $(".respuesta").hide();
+                
+                $(".principal h3").toggle(function(){
+                    $(this).next(".respuesta").fadeIn();
+                    $(this).addClass("cerrar");
+                }, function(){
+                    $(this).next(".respuesta").fadeOut();
+                    $(this).removeClass("cerrar");
+                })
+            });
+            
+            
+        </script>
+    </head>
+    <body>
+        
+        <div id="cabezera" class="cabezera">
+            <h2>Preguntas y respuesta de la pagina</h2>
+        </div>
+        
+        <div id="principal" class="principal">
+            <h3>¿qué quiere decir Lorem ipsum dolor sit amet?</h3>
+            <div id="respuesta1" class="respuesta">
+                La frase más similar que encontramos en el tratado filosófico es: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+            </div>
+            <h3>¿cómo poner texto en HTML?</h3>
+            <div id="respuesta2" class="respuesta">
+    Para que un texto se muestre en nuestra página web simplemente lo introduciremos en la etiqueta <body>, como hemos visto en los ejemplos anteriores.
+    Para insertar un párrafo escribiremos el texto entre la apertura y el cierre de la etiqueta <p>
+            </div>
+            <h3>¿cómo usar Lorem Ipsum HTML?</h3>
+            <div id="respuesta3" class="respuesta">
+                Generar texto Lorem Ipsum: Escribir ' Lorem ' y pulsar TAB . Se puede hacer dentro de etiquetas <p> o donde te convenga. 
+            </div>
+            <h3>¿Cómo se usa Lorem Ipsum?</h3>
+            <div class="respuesta">
+                Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+            </div>
+            <h3>¿Qué quiere decir Lorem Ipsum en español?</h3>
+            <div class="respuesta">
+                Su título deriva del latín dolorem ipsum, que significa «el dolor en sí». Y es que en sus versiones más comunes Lorem Ipsum usa trozos de De finibus bonorum et malorum, un tratado de filosofía de Marco Tulio Cicerón, aunque con palabras y frases modificadas, eliminadas o añadidas.
+            </div>
+            <h3>¿Cómo escribir una página HTML?</h3>
+            <div class="respuesta">
+                Para escribir texto dentro de un documento HTML simplemente tenemos que añadir texto al fichero que contenga nuestra página web. Así de simple. Solo añadimos el texto que queramos visualizar.
+            </div>
+        </div>
+        
+    </body>
+</html>

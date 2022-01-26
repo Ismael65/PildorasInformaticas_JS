@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Uso del Bucle For 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+           /* var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+                    "Noviembre", "Diciembre"];
+                
+                //for(var i=0; i<12; i++){
+                    for(var i=0; i < meses.length; i++){
+                    document.write(meses[i] + "<br>");
+                }*/
+    
+    var trabajador = new Array();
+    var persona = "";
+    var contador = 0;
+    
+    while(persona != "salir"){
+        persona = prompt("Introduce trabajador. ('salir' para escapar)");
+        trabajador[contador] = persona;
+        contador++;
+    }
+    trabajador.pop();
+    for(var i=0; i < trabajador.length; i++){
+        document.write(trabajador[i] + "<br>");
+    }
+            
+        </script>
+        
+    </head>
+    <body>
+        
+    </body>
+</html>

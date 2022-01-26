@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 44</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            #menu_principal{
+                position: absolute;
+                left: 400px;
+                top: 170px;
+                width: 300px;
+                height: 131px;
+                z-index: 1
+            }
+            #menu_principal li{
+                display: inline;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            #submenu1{
+                position: absolute;
+                left: 400px;
+                top: 200px;
+                width: 200px;
+                height: 131px;
+                z-index: 2;
+            }
+
+
+        </style>
+
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#submenu1").hide();
+
+                /*$("#archivo").toggle(muestra_menu, oculta_menu);*/
+                $("#archivo").toggle(function () {
+                    $("#submenu1").show();
+                }, function () {
+                    $("#submenu1").hide();
+                });
+
+                $("#opcion1").click(function () {
+                    alert("Has pulsado opcion 1");
+                });
+                $("#opcion2").click(function () {
+                    alert("Has pulsado opcion 2");
+                });
+                $("#opcion3").click(function () {
+                    alert("Has pulsado opcion 3");
+                });
+
+            });
+
+            /*function muestra_menu(){
+             $("#submenu1").show();
+             }
+             function oculta_menu(){
+             $("#submenu1").hide();
+             }*/
+
+        </script>
+    </head>
+    <body>
+
+        <div id="submenu1">
+            <ul>
+                <li id="opcion1"><a href="#">Opción 1</a></li>
+                <li id="opcion2"><a href="#">Opción 2</a></li>
+                <li id="opcion3"><a href="#">Opción 3</a></li>
+            </ul>
+        </div>
+
+        <div id="menu_principal">
+            <ul>
+                <li id="archivo"><a href="#">Archivo</a></li>
+                <li id="edicion"><a href="#">Edición</a></li>
+                <li id="herramientas"><a href="#">Herramientas</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

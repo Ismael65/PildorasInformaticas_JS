@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 37</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+    #primer_parrafo{
+        background-color: #CC0000;
+    }
+    
+
+</style>
+<script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        /*var colorFondo = $("#primer_parrafo").css("background-color");
+        alert(colorFondo);*/
+        
+        var colorFondo = $("#primer_parrafo").css("background-color", "#00f");
+        
+        $("p.destacado").css("border", "2px dotted blue");
+    });
+
+
+</script>
+        
+    </head>
+    <body>
+        
+        <p id="primer_parrafo">Primer Parrafo</p>
+    <p class="destacado">Destacado</p>
+    <p>Tercer Parrafo</p>
+        
+        
+    </body>
+</html>

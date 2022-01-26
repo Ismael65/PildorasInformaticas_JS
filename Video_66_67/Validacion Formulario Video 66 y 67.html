@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Validacion Formularion Video 66 y 67</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                background-color: #204A87;                               
+            }
+            h1{
+                text-align: center;
+            }
+            h3{
+                margin-left: 300px;
+            }            
+            #form_registro label.error{
+                font-size: 0.8em;
+                color: #CC0000;
+                font-weight: bold;
+                display: block;
+                margin-left: 5px;
+            }
+
+        </style>
+
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        <script src="../../JQUERY/jquery.validate.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+
+                $("#form_registro").validate({
+
+                    rules: {
+                        e_mail: {
+                            required: true,
+                            email: true
+                        },
+                        password: {
+                            required: true,
+                            rangelength: [8, 16]
+                        }, //fin de contraseña
+                        confirma: {
+                            equalTo: "#password"
+                        }  // fin de confirma contraseña
+                    }, //fin de las reglas
+
+                    messages: {
+                        e_mail: {
+                            required: "Introduce email, por favor",
+                            email: "El formato es erroneo, pedro@gmail.com"
+                        }, //fin de los mensajes del correo
+                        password: {
+                            required: "Por favor introduce contraseña",
+                            rangelength: "Entre 8 y 16 caracteres"
+                        }, // fin de contraseña
+                        confirma: {
+                            equalTo: "No coinciden los campos"
+                        }, // fin de confirmar contraseña
+                    }, //fin de los mensajes
+
+                    errorPlacement: function (error, element) {
+                        if (element.is(":radio") || element.is(":checkbox")) {
+                            error.appendTo(element.parent());
+                        } else {
+                            error.insertAfter(element);
+                        }
+                    }
+
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div id="contenedor">
+            <h1>PILDORAS INFORMATICAS</h1>
+
+            <H3>Rellenar</H3>
+            <hr>
+
+            <form name="form_registro" id="form_registro">
+                <table width="60%" border="0" align="center" id="tabla_form">
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><label for="nombre"></label>
+                            <input type="text" name="nombre" id="nombre" class="required" title="por favor, rellena el nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>email:</td>
+                        <td><label for="e_mail"></label>
+                            <input type="text" name="e_mail" id="e_mail" ></td>
+                    </tr>
+                    <tr>
+                        <td>contraseña:</td>
+                        <td><label for="password"></label>
+                            <input type="password" name="password" id="password" ></td>
+                    </tr>
+                    <tr>
+                        <td>Confirma contrasena:</td>
+                        <td><label for="confirma"></label>
+                            <input type="password" name="confirma" id="confirma" ></td>
+                    </tr>
+                    <tr>
+                        <td>Aficiones:</td>                    
+                        <td><input type="checkbox" name="hobby" id="comer" value="comer" class="required" title="Seleccione un elemento">
+                            <label for="comer">Comer</label></td>
+                        <td><input type="checkbox" name="hobby" id="beber" value="beber">
+                            <label for="beber">Beber</label></td>
+                        <td><input type="checkbox" name="hobby" id="dormir" value="dormir">
+                            <label for="dormir">Dormir</label></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Nacimiento:</td>
+                        <td><label for="fecha"></label>
+                            <input type="text" name="fecha" id="fecha" class="date" title="Utiliza el formato mm/dd/aaaa"></td>
+                    </tr>
+                    <tr>
+                        <td>Planeta:</td>
+                        <td><select name="planetas" id="planetas" class="required" title="Elige planeta de nacimiento">
+                                <option value="">--Por favor, Selecciona--</option>
+                                <option value="venus">Venus</option>
+                                <option value="tierra">Tierra</option>
+                                <option value="martes">Martes</option>
+                                <option value="pluton">Pluton</option
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Comentario:</td>
+                        <td><label for="comentario"></label>
+                            <textarea name="comentario" id="comentario" cols="20" rows="3"></textarea></td>
+                    </tr>
+
+                    <tr>                        
+                        <td>¿Deseas recibir correo basura de nuestra parte?</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="spam" id="correo_basura" class="required" title="Selecciona un elemento">
+                            <label for="correo_basura">Si</label>
+                            <input type="radio" name="spam" id="porsupuesto">
+                            <label for="porsupuesto">Por supuesto</label>
+                            <input type="radio" name="spam" id="tengo_opcion">
+                            <label for="tengo_opcion">Tengo opcion</label></td>
+                    </tr>
+                    <tr>                        
+                        <td><input type="submit" name="enviar" id="enviar" value="enviar"></td>
+                    </tr>
+                </table>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>

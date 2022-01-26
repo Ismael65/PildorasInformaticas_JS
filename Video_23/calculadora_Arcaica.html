@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calculadora Arcaica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+            
+            var repetir = "si";
+                        
+            function suma(num1,num2){
+                alert("la suma es: " + (num1 + num2));
+            }
+            function resta(num1,num2){
+                alert("la resta es: " + (num1 - num2));
+            }
+            function multiplicacion(num1,num2){
+                alert("la multiplicacion es: " + (num1 * num2));
+            }
+            function division(num1,num2){
+                alert("la division es: " + (num1 / num2));
+            }
+            
+            do{
+                
+            var operacion = prompt("¿Que operacion deseas realizar?: suma / resta / multiplicacion / division");
+            var operador1 = parseInt(prompt("Introduce el primer Nº"));
+            var operador2 = parseInt(prompt("Introduce el segundo Nº"));
+            
+            
+            if(operacion == "suma"){
+                suma(operador1, operador2);
+            }
+            else if(operacion == "resta"){
+                resta(operador1,  operador2);
+            }
+            else if(operacion == "multiplicacion"){
+                multiplicacion(operador1, operador2);
+            }
+            else if(operacion == "division"){
+                division(operador1,  operador2);
+            }
+            else {
+                alert("Lo siento operación no contemplada");
+            }
+            
+            repetir = prompt("Desea repetir las operaciones?");
+        }while(repetir == "si");
+            
+        </script>
+        
+    </head>
+    <body>
+        
+    </body>
+</html>

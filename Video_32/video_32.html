@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 32</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .mi_contenedor{
+                background-color: green;
+            }
+        </style>
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                //alert($("#errores").html());
+                //alert($("#errores h2").html());
+                
+                //$("#errores").html("<p> Hay errores en el formulario </p>");
+                $("#errores").append("<p> Hay errores en el formulario (append())</p>");
+                $("#errores").prepend("<p> Hay errores en el formulario (prepend())</p>");
+                $("#errores").before("<p> Hay errores en el formulario (before())</p>");
+                $("#errores").after("<p> Hay errores en el formulario (after())</p>");
+                $("#errores h2").text(" Hay errores en el formulario (text())");
+            });
+            
+        </script>
+    </head>
+    <body>
+        
+        <div id="contenedor">
+            
+            <div id="errores" class="mi_contenedor">
+                
+                <h2>ERRORES</h2>
+            </div>
+            
+        </div>
+        
+        
+    </body>
+</html>

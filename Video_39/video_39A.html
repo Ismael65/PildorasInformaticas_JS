@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 39 A</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            
+            $(document).ready(function(){
+                var elemento = document.querySelectorAll("img");
+                for(var i=0; i <elemento.length; i++){
+                    elemento[i].addEventListener("mouseover", cambiar, false);
+                    elemento[i].addEventListener("mouseout", restaurar, false);
+                }
+            });
+            
+            function cambiar(e){
+                if(e.target == img1){
+                    $("#img1").attr("src", "../../public_html/imagen/1.jpg");
+                }else if(e.target == img2){
+                    $("#img2").attr("src", "../../public_html/imagen/2.jpg");
+                }else if(e.target == img3){
+                    $("#img3").attr("src", "../../public_html/imagen/3.jpg");
+                }
+            }
+            
+            function restaurar(e){
+                if(e.target == img1){
+                    $("#img1").attr("src", "../../public_html/imagen/imagen2/1.jpg");
+                }else if(e.target == img2){
+                    $("#img2").attr("src", "../../public_html/imagen/imagen2/2.jpg");
+                }else if(e.target == img3){
+                    $("#img3").attr("src", "../../public_html/imagen/imagen2/3.jpg");
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        
+        <div>
+            
+            <img src="../../public_html/imagen/imagen2/1.jpg" width="115px" id="img1">
+            <img src="../../public_html/imagen/imagen2/2.jpg" width="115px" id="img2">
+            <img src="../../public_html/imagen/imagen2/3.jpg" width="115px" id="img3">
+            
+        </div>
+        
+    </body>
+</html>

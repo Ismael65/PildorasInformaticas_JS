@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 31 A</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            #anuncio{
+                background-color: #222222;
+                color: white;
+                font-size: 24px;
+            }
+        </style>
+        
+        <!--<script> NO FUNCIONO  da ERROR
+            //si jQuery
+            var anuncio1 = document.getElementById("anuncio");
+            anuncio1.style.width = "500px";
+            anuncio1.style.heigth = "500px";
+            anuncio1.innerHTML = "VENDE";
+            
+        </script>-->
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            //con jQuery
+            $(document).ready(function(){
+                $("#anuncio").width(500).height(500)
+                        .text("VENDE")
+                        .hide()
+                        .fadeIn(10000);
+            });
+            
+        </script>
+        
+    </head>
+    <body>
+        
+        <div id="anuncio">
+            
+            COMPRA
+        </div>
+        
+    </body>
+</html>

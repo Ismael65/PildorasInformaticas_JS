@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video 40</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            #contenedor1{
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                width: 297px;
+                height: 297px;
+                z-index: 1;
+            }
+            #contenedor2{
+                position: absolute;
+                left: 300px;
+                top: 10px;
+                width: 300px;
+                height: 300px;
+                z-index: 2;
+            }
+            ul{
+                list-style: none;
+            }
+            li{
+                margin: 10px 0;
+                font-size: 24px;
+                width: 140px;
+            }
+            .destacar{
+                background-color: #CC0000;
+                color: antiquewhite;
+            }
+        </style>
+        
+        <script src="../../JQUERY/jquery-1.7.1.min.js"></script>
+        
+        <script>
+            
+            $(document).ready(function(){
+                var elementos = document.querySelectorAll("li");
+                for(var i=0; i < elementos.length; i++){
+                    elementos[i].addEventListener("mouseover", pon_imagen, false);
+                    elementos[i].addEventListener("mouseout", quita_imagen, false);
+                }
+            });
+            
+            function pon_imagen(e){
+                if(e.target == elem1){
+                    $("#elem1").addClass("destacar");
+                    $("img").attr("src", "../../public_html/imagen/1.jpg");
+                }else if(e.target == elem2){
+                    $("#elem2").addClass("destacar");
+                    $("img").attr("src", "../../public_html/imagen/2.jpg");
+                }else if(e.target == elem3){
+                    $("#elem3").addClass("destacar");
+                    $("img").attr("src", "../../public_html/imagen/3.jpg");
+                }
+            }
+            function quita_imagen(e){
+                if(e.target == elem1){
+                    $("#elem1").removeClass("destacar");
+                    $("img").removeAttr("src");
+                }else if(e.target == elem2){
+                    $("#elem2").removeClass("destacar");
+                    $("img").removeAttr("src");
+                }else if(e.target == elem3){
+                    $("#elem3").removeClass("destacar");
+                    $("img").removeAttr("src");
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        <div id="contenedor1">
+            
+            <ul>
+                <li id="elem1" >Imagen 1</li>
+                <li id="elem2" >Imagen 2</li>
+                <li id="elem3" >Imagen 3</li>
+            </ul>
+            
+        </div>
+        
+        <div id="contenedor2">
+            
+            <img src="">
+        </div>
+        
+    </body>
+</html>
